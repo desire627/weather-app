@@ -11,20 +11,26 @@ function App() {
   const [error, setError] = useState('');
 
   const fetchWeather = async () => {
-    const apiKey = '32f19a1b32f18e4daf678d645aa12d51';
-    const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`;
+    if (!city.trim()) {
+      setError('Please enter a valid city name.');
+      setWeather(null);
+      return;
+    }
+
+    const apiKey = '5ed8b884470c33b2d7c969ae0a9f6871';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
-      setError(''); // Clear previous error
+      setError(''); // Clear previous errors
       const response = await axios.get(url);
 
-      if (response.data.error) {
-        throw new Error(response.data.error.info);
+      if (response.data.cod !== 200) {
+        throw new Error(response.data.message || 'City not found or API error');
       }
 
-      setWeather(response.data); 
+      setWeather(response.data); // Update weather data
     } catch (err) {
-      setWeather(null); 
+      setWeather(null);
       setError(err.message || 'City not found or API error');
     }
   };
