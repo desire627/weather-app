@@ -38,9 +38,14 @@ function App() {
   return (
     <div className="App">
       <div className="app-container">
-        <h1>Weather App</h1>
-        <SearchBar city={city} setCity={setCity} onSearch={fetchWeather} />
-        <ErrorMessage message={error} />
+        <div className="search-container">
+          <SearchBar city={city} setCity={setCity} onSearch={fetchWeather} />
+        </div>
+        <div className="title-container">
+          <h1>Weather1224</h1>
+          <p>Discover the weather in your city!</p>
+        </div>
+        {error && <ErrorMessage message={error} />}
         <WeatherCard weather={weather} />
       </div>
     </div>

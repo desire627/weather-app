@@ -26,9 +26,9 @@
 }
 
 .weather-details {
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+  gap: 20px; /* Space between items */
   margin-top: 20px;
 }
 
@@ -58,4 +58,24 @@
 .weather-card p {
   font-size: 20px;
   margin: 8px 0;
+}
+
+/* Add responsive design for mobile devices */
+@media screen and (max-width: 480px) {
+  .weather-details {
+    grid-template-columns: 1fr; 
+  }
+
+  .weather-item {
+    margin-bottom: 10px; 
+  }
+
+  .weather-icon {
+    width: 30px; 
+    height: 30px;
+  }
+
+  .weather-item p {
+    font-size: 12px; 
+  }
 }
