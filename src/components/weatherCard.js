@@ -70,7 +70,7 @@ const WeatherCard = ({ weather }) => {
             </div>
           </>
         ) : (
-          // Message displayed if no weather data is available
+          
           <p>Please search for a city to see the weather details.</p>
         )}
       </div>

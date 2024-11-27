@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 130vh;
 }
 
 .App {
@@ -63,7 +63,7 @@ body {
   padding: 10px 15px;
   border-radius: 0 20px 20px 0;
   border: none;
-  background-color: #6c63ff; /* Purple background */
+  background-color: rgb(71, 71, 234); /* Purple background */
   color: white; /* Ensure the text color is visible */
   font-size: 16px;
   font-weight: bold;
@@ -76,7 +76,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: #4b47cc; /* Slightly darker purple on hover */
+  background-color: rgb(8, 8, 114); /* Slightly darker purple on hover */
 }
 
 /* Icon Styling */
@@ -105,7 +105,7 @@ body {
 
 /* Weather Card Styling */
 .weather-card {
-  background: #fff;
+  background: #b3b3d9;
   color: #333;
   border-radius: 10px;
   padding: 20px;
@@ -116,10 +116,14 @@ body {
 .weather-card h2 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: white;
+  font-weight: bolder;
 }
 
 .weather-card p {
   margin: 5px 0;
+  color: white;
+  font-weight: bolder;
 }
 
 .weather-icon {
