@@ -16,6 +16,7 @@ function App() {
     if (!city.trim()) {
       setError('Please enter a valid city name.');
       setWeather(null);
+      setCoords(null); // Reset coordinates when invalid input
       return;
     }
 
@@ -31,7 +32,10 @@ function App() {
       }
 
       setWeather(response.data); // Update weather data
-      setCoords({ lat: response.data.coord.lat, lon: response.data.coord.lon }); // Set coordinates
+      setCoords({
+        lat: response.data.coord.lat,
+        lon: response.data.coord.lon,
+      }); // Set coordinates for the map
     } catch (err) {
       setWeather(null);
       setError(err.message || 'City not found or API error');
@@ -59,6 +63,7 @@ function App() {
         </div>
 
         {error && <ErrorMessage message={error} />}
+        {/* Pass weather data and display time of weather update */}
         <WeatherCard weather={weather} />
       </div>
     </div>
