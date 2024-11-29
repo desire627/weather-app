@@ -3,7 +3,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #1e1e2f; /* Dark background */
+  position: relative;
+  background-image: url('/clouds.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
   display: flex;
   justify-content: center;
@@ -51,7 +55,7 @@ body {
   width: 70%;
   padding: 10px;
   border-radius: 20px 0 0 20px;
-  border: 1px solid #4a4a7a;
+  border: 1px solid #7a4a73;
   background-color: #2e2e50;
   color: white;
   font-size: 16px;
@@ -63,7 +67,7 @@ body {
   padding: 10px 15px;
   border-radius: 0 20px 20px 0;
   border: none;
-  background-color: rgb(71, 71, 234); /* Purple background */
+  background-color: green; /* Purple background */
   color: white; /* Ensure the text color is visible */
   font-size: 16px;
   font-weight: bold;
@@ -76,7 +80,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: rgb(8, 8, 114); /* Slightly darker purple on hover */
+  background-color: mediumseagreen; /* Slightly darker purple on hover */
 }
 
 /* Icon Styling */
